@@ -1,0 +1,16 @@
+		local lyrics = {
+    "必殺ひっさつマジシリーズ",
+    "全方ぜんほう位いマジ殴なぐり"
+}
+
+-- Chat function
+local function singLyrics()
+    for _, lyric in ipairs(lyrics) do
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(lyric, "All")
+        wait(4.5) -- Adjust the delay as desired
+    end
+end
+
+-- Start singing
+singLyrics()
+
